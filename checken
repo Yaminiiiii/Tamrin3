@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a, n[100];
+    bool arr;
+    cout << "Geben Sie Ihnen Nummer :";
+    cin >> a;
+    for (int i = 0; i < a ; ++i) {
+        cout << "Geben Sie Ihnen " << i+1 << " Nummer: ";
+        cin >> n[i];
+    }
+    for (int i = 0; i < a; ++i) {
+        if (n[i]<n[i+1])
+            arr=1;
+        else {
+            arr = 0;
+            break;
+        }
+    }
+    if (arr==1)
+        cout << "ordentlich";
+    else
+        cout << "nicht ordentlich";
+    return 0;
+}
